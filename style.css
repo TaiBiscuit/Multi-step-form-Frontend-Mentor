@@ -1,0 +1,189 @@
+:root{
+
+    /*Primary*/
+
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --lightblue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+
+    /*Neutral*/
+
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+  
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--magnolia);
+}
+
+
+
+
+.container{
+    height: 100vh;
+    position: relative;
+}
+
+.btns-container{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    height: 100px;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.back, .next{
+    border: none;
+    height: 40px;
+    width: 100px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.next{
+    background-color: var(--marine-blue);
+    color: white;
+}
+
+.back{
+    background-color: white;
+    color: var(--alabaster);
+}
+
+.steps-btn{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 29px;
+    left: 26px;
+    right: 0;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.step-btn{
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1.9px solid var(--light-gray);
+}
+
+.step-btn.current{
+    color: var(--marine-blue);
+    background-color: var(--lightblue);
+    border: none;
+}
+
+.step-content{
+    padding: 2rem 1rem;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--marine-blue);
+    margin-bottom: 1rem;
+}
+
+.sub-title{
+    font-size: 16px;
+    color: var(--cool-gray);
+    margin-bottom: 1.3rem;
+}
+
+.input{
+    display: block;
+    width: 90%;
+    height: 39px;
+    border-radius: 5px;
+    padding: 1rem;
+    font-weight: 700;
+    color: var(--light-gray);
+    border: 1px solid var(--light-gray);
+}
+
+.label{
+    color: var(--marine-blue);
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.hide{
+    display: none;
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 287px;
+    height: 548px;
+    top: 99px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 6;
+}
+
+.step.personal-info{
+    height: 430px;
+
+}
+
+.click-btns-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.click-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+    margin-top: 15px;
+}
+
+.btn-img{
+    margin-right: 10px;
+    margin-left: 10px;
+}
