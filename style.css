@@ -19,10 +19,7 @@
 }
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-  
-
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');  
 
 *{
     margin: 0;
@@ -38,20 +35,15 @@ main{
     background-color: var(--magnolia);
 }
 
-
-
-
-.container{
-    height: 100vh;
-    position: relative;
-}
-
 .btns-container{
     display: grid;
+    position: absolute;
+    bottom: 0;
     align-items: center;
     align-content: center;
     background-color: white;
     height: 100px;
+    width: 100%;
 }
 
 .btns{
@@ -60,7 +52,7 @@ main{
     
 }
 
-.back, .next{
+.back, .next, .finish-btn{
     border: none;
     height: 40px;
     width: 100px;
@@ -77,6 +69,45 @@ main{
 .back{
     background-color: white;
     color: var(--alabaster);
+}
+
+.finish-btn{
+    background-color: var(--purplish-blue);
+    color: white;
+    font-weight: 700;
+
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 339px;
+    height: 548px;
+    top: 99px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 6;
+}
+
+.step.personal-info{
+    height: 430px;
+}
+
+.step.add-ons{
+    height: 400px;
+}
+
+.step.finish{
+    height: 400px;
+}
+
+.step.thanku{
+    height: 400px;
 }
 
 .steps-btn{
@@ -114,8 +145,8 @@ main{
 }
 
 .title{
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 790;
+    font-size: 26px;
     color: var(--marine-blue);
     margin-bottom: 1rem;
 }
@@ -124,6 +155,10 @@ main{
     font-size: 16px;
     color: var(--cool-gray);
     margin-bottom: 1.3rem;
+}
+
+.sub-title-txt{
+    margin-bottom: 20px;
 }
 
 .input{
@@ -143,32 +178,6 @@ main{
     margin-bottom: 20px;
 }
 
-
-.hide{
-    display: none;
-}
-
-.step{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 287px;
-    height: 548px;
-    top: 99px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    background-color: white;
-    z-index: 6;
-}
-
-.step.personal-info{
-    height: 430px;
-
-}
-
 .click-btns-box{
     display: flex;
     flex-direction: column;
@@ -179,11 +188,192 @@ main{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 70px;
+    height: 80px;
     margin-top: 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.click-btn-addon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80px;
+    margin-top: 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.btn-clicked{
+    border: 0.5px solid var(--purplish-blue);
+    background-color: var(--magnolia);
 }
 
 .btn-img{
     margin-right: 10px;
     margin-left: 10px;
+}
+
+.btn-content{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.btn-content .plan, .monyear{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--marine-blue);
+}
+
+.btn-content .price, .desc{
+    color: var(--cool-gray);
+}
+
+.btn-content-text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+}
+
+.slide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    height: 50px;
+    background-color: var(--alabaster);
+}
+
+.addon{
+    flex-direction: row;
+    align-items: center;
+}
+
+.addonstep{
+    margin-bottom: 5px;
+}
+
+.checkbox{
+    margin: 1rem 0.5rem 1rem 1rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    accent-color: var(--purplish-blue);
+}
+
+.payment-price{
+    display: flex;
+    align-items: start;
+}
+
+.month, .year{
+    color: var(--purplish-blue);
+}
+
+.recipe-box{
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: var(--alabaster);
+}
+
+.top-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.title-and-change-box .title{
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.recipe-change{
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--cool-gray);
+    text-decoration: underline;
+}
+
+.title-and-change-price{
+    color: var(--marine-blue);
+    font-weight: 700;
+}
+
+.bottom-side{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chosen-addon, .chosen-addon-price{
+    margin-bottom: 1rem;
+}
+
+.chosen-addon-price{
+    color: var(--marine-blue);
+}
+
+.total{
+    display: flex;
+    margin: 2rem 1rem 2rem 1rem;
+    justify-content: space-between;
+}
+
+.total-month, .total-year{
+    display: flex;
+}
+
+.total-month-price{
+    font-weight: 700;
+    color: var(--purplish-blue);    
+}
+
+.thanku-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.thanku-img{
+    align-self: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    height: 50px;
+    width: 50px;
+}
+
+.thanku-txt-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.thanku-txt{
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0 1rem;
+    color: var(--cool-gray);
+}
+
+@media only screen and (min-width: 1440px) {
+    .step{
+        width: 1000px;
+        height: 1240px;
+    }
+
+    .step-content{
+        padding: 4rem 0rem 4rem 20rem;
+    }
+}
+
+.hide{
+    display: none;
 }

@@ -18,7 +18,8 @@
   <main>
     <div class="container">
       <div class="background-pic">
-        <img src="./assets/images/bg-sidebar-mobile.svg" alt="" class="pic">
+        <img src="./assets/images/bg-sidebar-mobile.svg" alt="" class="pic mob hide">
+        <img src="./assets/images/bg-sidebar-desktop.svg" alt="" class="pic desk">
       </div>
       <div class="steps-btn">
         <button class="btns step-btn current">1</button>
@@ -27,11 +28,11 @@
         <button class="btns step-btn">4</button>
       </div>
       <div class="form" id="form">
-        <div class="step personal-info hide" id="personal-info">
+        <div class="step personal-info" id="personal-info">
           <div class="step-content">
             <div class="title">Personal info</div>
             <div class="sub-title">
-              <p>Please provide your name, email address, and phone number.</p>
+              <p class="sub-title-txt">Please provide your name, email address, and phone number.</p>
             </div>
             <label for="name" class="label" id="name-input">Name
               <input type="text" class="input" placeholder="e.g. Stephen King">
@@ -44,27 +45,96 @@
             </label>
           </div>
         </div>
-        <div class="step select-plan" id="select-plan">
+        <div class="step select-plan hide" id="select-plan">
           <div class="step-content">
             <div class="title">Select your plan</div>
             <div class="sub-title">
-              <p>You have the option of monthly or yearly billing.</p>
+              <p class="sub-title-txt">You have the option of monthly or yearly billing.</p>
               <div class="click-btns-box">
-                <button class="click-btn"><img src="./assets/images/icon-arcade.svg" class="btn-img"><div class="btn-content"><p>Arcade</p><p>$9/mo</p></div></button>
-                <button class="click-btn"><img src="./assets/images/icon-advanced.svg" class="btn-img"><div class="btn-content"><p>Advanced</p><p>$12/mo</p></div></button>
-                <button class="click-btn"><img src="./assets/images/icon-pro.svg" class="btn-img"><div class="btn-content"><p>Pro</p><p>$15/mo</p></div></button>
+                <button class="click-btn btn-clicked" id="arcade-btn"><img src="./assets/images/icon-arcade.svg" class="btn-img"><div class="btn-content"><p class="plan">Arcade</p><p class="price">$9/mo</p><p class="hide">2 months free</p></div></button>
+                <button class="click-btn" id="advance-btn"><img src="./assets/images/icon-advanced.svg" class="btn-img"><div class="btn-content"><p class="plan">Advanced</p><p class="price">$12/mo</p><p class="hide">2 months free</p></div></button>
+                <button class="click-btn" id="pro-btn"><img src="./assets/images/icon-pro.svg" class="btn-img"><div class="btn-content"><p class="plan pro">Pro</p><p class="price">$15/mo</p><p class="hide">2 months free</p></div></button>
+              </div>
+              <div class="slide">
+                <p class="monyear">Monthly</p>
+                <p>#######</p>
+                <p class="monyear">Yearly</p>
+              </div>              
+            </div>
+          </div>
+        </div>
+        <div class="step add-ons hide">
+          <div class="step-content">
+            <div class="title">Pick add-ons</div>
+            <div class="sub-title">
+              <p>Add-ons help enhance your gaming experience</p>
+              <div class="click-btns-box">
+                <button class="click-btn-addon"><div class="btn-content addon"><input type="checkbox" class="checkbox"><div class="btn-content-text"><p class="plan addonstep">Online service</p><p class="desc">Access to multiplayer games</p></div><div class="payment-price"><div class="month">+$1/mo</div><div class="year hide">+$10/yr</div></div></div></button>
+                <button class="click-btn-addon"><div class="btn-content addon"><input type="checkbox" class="checkbox"> <div class="btn-content-text"><p class="plan addonstep">Larger storage</p><p class="desc">Extra 1TB of cloud save</p></div><div class="payment-price"><div class="month">+$2/mo</div><div class="year hide">+$20/yr</div></div></div></button>
+                <button class="click-btn-addon"><div class="btn-content addon"><input type="checkbox" class="checkbox"><div class="btn-content-text"><p class="plan addonstep">Customizable profile</p><p class="desc">Custome theme on your profile</p></div><div class="payment-price"><div class="month">+$2/mo</div><div class="year hide">+$20/yr</div></div></div></button>
               </div>
             </div>
           </div>
         </div>
+        <div class="step finish hide">
+          <div class="step-content">
+            <div class="title">Finishing up</div>
+            <div class="sub-title">
+              <p>Double-check everything looks OK before confirming.</p>
+              <div class="recipe-box">
+                <div class="top-side">
+                  <div class="title-and-change-box">
+                    <p class="title" id="recipe-title">Arcade(Montly)</p>
+                    <button class="recipe-change" id="recipe-change">Change</button>
+                  </div>
+                  <div class="title-and-change-price">
+                    <p>10%</p>
+                  </div>
+                </div>
+                <div class="bottom-side">
+                  <div class="bottom-txt">
+                    <p class="chosen-addon">Online service</p>
+                    <p class="chosen-addon">Larger storage</p>
+                  </div>
+                  <div class="bottom-price">
+                    <p class="chosen-addon-price">+10$ss</p>
+                    <p class="chosen-addon-price">+1$aa</p>
+                  </div>
+                </div>
+              </div>
+              <div class="total">
+                <div class="total-month">
+                  <p>Total(per month)</p>
+                </div>
+                <div class="total-month-price">
+                  <p id="total-moth-price">$100/mo</p>
+                </div>
+                <div class="total-year hide">
+                  <p>Total(per year)</p>
+                  <p id="total-year-price">+$12/mo</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="step thanku hide">
+          <div class="thanku-content">
+            <img src="./assets/images/icon-thank-you.svg" class="thanku-img">
+            <p class="title thanks">Thank you!</p>
+            <div class="thanku-txt-box">
+              <p class="thanku-txt">Thanks for confirming your subscription!</p>
+              <p class="thanku-txt">We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="btns-container">
+          <div class="btns">
+            <button class="back">Go Back</button>
+            <button class="next">Next Step</button>
+            <button class="finish-btn hide">Confirm</button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="btns-container">
-      <div class="btns">
-        <button class="back">Go Back</button>
-        <button class="next">Next Step</button>
-      </div>
-    </div>
   </main>
   <footer>
     <script src="./script.js"></script>
